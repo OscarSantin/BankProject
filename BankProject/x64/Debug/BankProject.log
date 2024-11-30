@@ -1,0 +1,8 @@
+﻿  bankClient.cpp
+C:\Users\bboyp\Documents\Scuola\Anno_2024_5\BankProject\BankProject\bankClient.cpp(46,15): warning C4244: 'argomento': conversione da 'time_t' a 'unsigned int'. Possibile perdita di dati.
+C:\Users\bboyp\Documents\Scuola\Anno_2024_5\BankProject\BankProject\bankClient.cpp(127,15): warning C4244: 'argomento': conversione da 'time_t' a 'unsigned int'. Possibile perdita di dati.
+C:\Users\bboyp\Documents\Scuola\Anno_2024_5\BankProject\BankProject\bankClient.cpp(214,15): warning C4244: 'argomento': conversione da 'time_t' a 'unsigned int'. Possibile perdita di dati.
+C:\Users\bboyp\Documents\Scuola\Anno_2024_5\BankProject\BankProject\bankClient.cpp(328,14): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+  main.cpp
+  Generazione del codice in corso...
+  BankProject.vcxproj -> C:\Users\bboyp\Documents\Scuola\Anno_2024_5\BankProject\x64\Debug\BankProject.exe
