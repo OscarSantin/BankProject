@@ -3,12 +3,17 @@
 #include <string>
 #include <vector>
 using namespace std;
+void waitForSendKey() {
+    cout << endl << "Premi Invio per tornare al menu principale.";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get(); 
+}
 int main() {
     bankClient firstClient("Giovanni");
     int control;
     int choice{ 0 };
     vector<double> investimentsV;
-    while (choice != 7) {
+    while (choice != 7 ) {
         cout << endl << "Cosa vuoi fare?:" << endl
             << "1 - Deposito" << endl
             << "2 - Prelievo" << endl
@@ -52,8 +57,9 @@ int main() {
             break;
         default:break;
         }
-        cout << endl << "Inserire un numero qualsiasi per tornare al menu" << endl;
-        cin >> control;
+        waitForSendKey();
+        system("clear");// Linux
+        //system("CLS");//windows
     }
     return 0;
 }

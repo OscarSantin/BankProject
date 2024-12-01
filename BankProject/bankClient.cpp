@@ -4,13 +4,13 @@ bankClient::bankClient(const string& name, double balance, double wallet) {
     this->balance = balance;
     this->wallet = wallet;
 }
-const void bankClient::printBalance () {
+void bankClient::printBalance() const {
     cout << balance << endl;
 }
-const void bankClient::printWallet() {
+void bankClient::printWallet() const {
     cout << wallet << endl;
 }
-const void bankClient::printStatus() {
+void bankClient::printStatus() const {
     cout << "Stato utente:" << endl << "Nome utente: " << name << endl << "Conto: " << balance << endl;
 }
 void bankClient::deposit(double moneyToDeposit) {
@@ -43,7 +43,6 @@ void bankClient::takeMoney(double moneyToTake) {
     return;
 }
 vector<double> bankClient::shortInvestiment(vector<double>& finalResults) {
-    srand(time(NULL));
     int choice;
     cout << "Scelta:" << endl << "1-Investimento di basso rischio e basso quandagno" << endl << "2-Investimento di medio rischio e medio quadagno" << endl << "3-Investimento di alto rischio e alto quadagno" << endl;
     cin >> choice;
@@ -62,7 +61,7 @@ vector<double> bankClient::shortInvestiment(vector<double>& finalResults) {
         else {
             balance -= moneyToInvest;
         }
-        const double winnings[10]{ 0.7,0.8,0.9,1.0,1.1,1.2,1.3,1.4,1.5,1.6 };
+        const double winnings[10]{ 0.7,0.8,0.9,1.0,1.1,1.1,1.1,1.1,1.2,1.2 };
         for (int duration = 0;duration < 12;duration++) {
             int controlInvestiment;
             controlInvestiment = rand() % 10;
@@ -85,7 +84,7 @@ vector<double> bankClient::shortInvestiment(vector<double>& finalResults) {
         else {
             balance -= moneyToInvest1;
         }
-        const double winnings1[10]{ 0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0 };
+        const double winnings1[10]{ 0.7,0.7,0.8,0.8,1.0,1.1,1.1,1.1,1.2,1.2 };
         for (int months = 0;months < 12;months++) {
             int controlInvestiment1;
             controlInvestiment1 = rand() % 10;
@@ -108,7 +107,7 @@ vector<double> bankClient::shortInvestiment(vector<double>& finalResults) {
         else {
             balance -= moneyToInvest2;
         }
-        const double winnings2[10]{ 0.1,0.2,0.3,0.4,0.6,0.8,1,2.0,2.5,3.0 };
+        const double winnings2[10]{ 0.6,0.6,0.7,0.7,0.8,0.8,1,1.2,1.3,1.4 };
         for (int months = 0;months < 12;months++) {
             int controlInvestiment2;
             controlInvestiment2 = rand() % 10;
@@ -124,7 +123,6 @@ vector<double> bankClient::shortInvestiment(vector<double>& finalResults) {
     return finalResults;
 }
 vector<double> bankClient::mediumInvestiment(vector<double>& finalResults) {
-    srand(time(NULL));
     int choice;
     cout << "Scelta:" << endl << "1-Investimento di basso rischio e basso quandagno" << endl << "2-Investimento di medio rischio e medio quadagno" << endl << "3-Investimento di alto rischio e alto quadagno" << endl;
     cin >> choice;
@@ -144,7 +142,7 @@ vector<double> bankClient::mediumInvestiment(vector<double>& finalResults) {
             balance -= moneyToInvest;
         }
         int controlInvestiment;
-        const double winnings[10]{ 0.7,0.8,0.9,1.0,1.1,1.2,1.3,1.4,1.5,1.6 };
+        const double winnings[10]{ 0.7,0.8,0.9,1.0,1.1,1.1,1.1,1.1,1.2,1.2 };
         for (int years = 0;years < 4;years++) {
             for (int duration = 0;duration < 12;duration++) {
                 controlInvestiment = rand() % 10;
@@ -169,7 +167,7 @@ vector<double> bankClient::mediumInvestiment(vector<double>& finalResults) {
             balance -= moneyToInvest1;
         }
         int controlInvestiment1;
-        const double winnings1[10]{ 0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0 };
+        const double winnings1[10]{ 0.7,0.7,0.8,0.8,1.0,1.1,1.1,1.1,1.2,1.2 };
         for (int years = 0;years < 4;years++) {
             for (int duration = 0;duration < 12;duration++) {
                 controlInvestiment1 = rand() % 10;
@@ -194,7 +192,7 @@ vector<double> bankClient::mediumInvestiment(vector<double>& finalResults) {
             balance -= moneyToInvest2;
         }
         int controlInvestiment2;
-        const double winnings2[10]{ 0.1,0.2,0.3,0.4,0.6,0.8,1,2.0,2.5,3.0 };
+        const double winnings2[10]{ 0.6,0.6,0.7,0.7,0.8,0.8,1,1.2,1.3,1.4 };
         for (int years = 0;years < 4;years++) {
             for (int duration = 0;duration < 12;duration++) {
                 controlInvestiment2 = rand() % 10;
@@ -211,7 +209,6 @@ vector<double> bankClient::mediumInvestiment(vector<double>& finalResults) {
     return finalResults;
 }
 vector<double> bankClient::longInvestiment(vector<double>& finalResults) {
-    srand(time(NULL));
     int choice;
     cout << "Scelta:" << endl << "1-Investimento di basso rischio e basso quandagno" << endl << "2-Investimento di medio rischio e medio quadagno" << endl << "3-Investimento di alto rischio e alto quadagno" << endl;
     cin >> choice;
@@ -231,7 +228,7 @@ vector<double> bankClient::longInvestiment(vector<double>& finalResults) {
             balance -= moneyToInvest;
         }
         int controlInvestiment;
-        const double winnings[10]{ 0.7,0.8,0.9,1.0,1.1,1.2,1.3,1.4,1.5,1.6 };
+        const double winnings[10]{ 0.7,0.8,0.9,1.0,1.1,1.1,1.1,1.1,1.2,1.2 };
         for (int years = 0;years < 10;years++) {
             for (int duration = 0;duration < 12;duration++) {
                 controlInvestiment = rand() % 10;
@@ -256,7 +253,7 @@ vector<double> bankClient::longInvestiment(vector<double>& finalResults) {
             balance -= moneyToInvest1;
         }
         int controlInvestiment1;
-        const double winnings1[10]{ 0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0 };
+        const double winnings1[10]{ 0.7,0.7,0.8,0.8,1.0,1.1,1.1,1.1,1.2,1.2 };
         for (int years = 0;years < 10;years++) {
             for (int duration = 0;duration < 12;duration++) {
                 controlInvestiment1 = rand() % 10;
@@ -281,7 +278,7 @@ vector<double> bankClient::longInvestiment(vector<double>& finalResults) {
             balance -= moneyToInvest2;
         }
         int controlInvestiment2;
-        const double winnings2[10]{ 0.1,0.2,0.3,0.4,0.6,0.8,1,2.0,2.5,3.0 };
+        const double winnings2[10]{ 0.6,0.6,0.7,0.7,0.8,0.8,1,1.2,1.3,1.4 };
         for (int years = 0;years < 10;years++) {
             for (int duration = 0;duration < 12;duration++) {
                 controlInvestiment2 = rand() % 10;
@@ -298,6 +295,7 @@ vector<double> bankClient::longInvestiment(vector<double>& finalResults) {
     return finalResults;
 }
 vector<double> bankClient::invest() {
+    srand(time(NULL));
     vector<double> finalResults;
     int choice;
     cout << "1 - Investimento breve durata (12 mesi)" << endl << "2 - Investimento media durata (4 anni)" << endl << "3 - Investimento lunga durata (10 anni)" << endl;
@@ -325,7 +323,7 @@ void bankClient::JumpMoths(const vector<double>& investimentsV, int JumpM) {
         printStatus();
         return;
     }
-    int size = investimentsV.size(); // Inserito perch� al linter non piaceva un confronto tra jumpM(int) e investmentV.size()(unsigned long long int)
+    size_t size = investimentsV.size(); // Inserito perchè al linter non piaceva un confronto tra jumpM(int) e investmentV.size()(unsigned long long int)
     if (JumpM > size) {
         balance += investimentsV[size - 1];
     }

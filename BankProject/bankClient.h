@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <ctime>
 using namespace std;
 class bankClient {
 private:
@@ -8,14 +9,14 @@ private:
     double balance;
     double wallet;
 public:
-
+    
     bankClient(const string& name, double balance = 0, double wallet = 100);
 
-    const void printBalance();
+    void printBalance() const;
 
-    const void printWallet();
+    void printWallet() const;
 
-    const void printStatus();
+    void printStatus() const ;
 
     void deposit(double moneyToDeposit);
 
